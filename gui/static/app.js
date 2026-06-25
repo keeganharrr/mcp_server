@@ -10,9 +10,8 @@ async function sendPost(url, data) {
 
 document.querySelector("button").addEventListener("click", async () => {
     const result = await sendPost("/run-tool", {
-        tool_name: "add",
-        arguments: { a: 1, b: 2 }
+        tool_name: "booker_stats",
+        arguments: {}
     });
     document.querySelector("p").innerText = result.result;
 });
-

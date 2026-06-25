@@ -24,4 +24,4 @@ def home(request: Request):
 @app.post("/run-tool")
 async def run_tool(request: ToolRequest):
     result = await call_tool(request.tool_name, request.arguments)
-    return {"result": str(result)}
+    return {"result": result.content[0].text}
